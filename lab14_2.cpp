@@ -25,22 +25,23 @@ int main()
 void showImage(const bool image[][M]){
     cout << "------------------------------------------------------------------------\n";
     for(int i=0;i<N;i++){
-        for(int j=0;j<M;j++){
+        for(int j=0;j<=M;j++){
             if(j==0) cout << "|";
-            if(j==M-1) cout << "|\n";
+            if(j==M) cout << "|\n";
             else if(image[i][j]==1) cout << "*";
             else cout << " ";
         }
     }
     cout << "------------------------------------------------------------------------" << endl; 
-    // cout << "\n";  
     
 }
 
-void updateImage(bool [][M],int a,int b,int c){
+void updateImage(bool image[N][M],int a,int b,int c){
     for(int i=0;i<N;i++){
         for(int j=0;j<M;j++){
-            // if(sqrt(pow(i-x)))
+            if(sqrt(pow(i-b,2)+pow(j-c,2))<=a-1){
+                image[i][j] = 1;
+            }
     }
 }
 }
