@@ -47,7 +47,9 @@ void stat(const double A[],int N,double B[]){
 
     double max=A[0],min=A[0];
     for(int i=1;i<N;i++){
-        if(A[i]>max) B[4]=A[i];
-        if(A[i]<min) B[5]=A[i];
+        if(A[i]>max) max=A[i];
+        if(A[i]<min) min=A[i];
+        B[4]=max;
+        B[5]=min;
     }
 }
